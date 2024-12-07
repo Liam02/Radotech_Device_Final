@@ -1,5 +1,5 @@
 #include "User.h"
-
+#include "HealthMetrics.h"
 User::User(){
     this->firstName = "";
     this->lastName = "";
@@ -47,4 +47,30 @@ string User::getFirstName(){
 }
 string User::getLastName(){
     return this->lastName;
+}
+
+void User::addReading(map<string, int> r, map<string, string> a){
+
+    userScans.addReading(r,a);
+
+}
+
+void User::addNote(vector<int> n){
+
+    userScans.addNote(n);
+}
+
+map<string, string> User::getAnalysis(int i){
+
+    return userScans.getAnalysis(i);
+}
+
+map<string, int> User::getScan(int i){
+    return userScans.getScan(i);
+}
+vector<int> User::getNotes(int i){
+    return userScans.getNote(i);
+}
+int User::getScansNum(){
+    return userScans.getNotesArraySize();
 }
