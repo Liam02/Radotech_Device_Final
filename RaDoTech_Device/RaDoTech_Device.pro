@@ -9,33 +9,35 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    Battery.cpp \
     CreateAccountPage.cpp \
     DeviceOverview.cpp \
     EnterAccountPage.cpp \
+    HealthMetrics.cpp \
     HomeScreenPage.cpp \
     LoginPage.cpp \
     User.cpp \
+    endofscannotes.cpp \
     main.cpp \
-    mainwindow.cpp
+    measuringpage.cpp
 
 HEADERS += \
-    Battery.h \
     CreateAccountPage.h \
     DeviceOverview.h \
     EnterAccountPage.h \
+    HealthMetrics.h \
     HomeScreenPage.h \
     LoginPage.h \
-    User.h
     User.h \
-    mainwindow.h
+    endofscannotes.h \
+    measuringpage.h
 
 FORMS += \
     CreateAccountPage.ui \
     EnterAccountPage.ui \
     HomeScreenPage.ui \
     LoginPage.ui \
-    mainwindow.ui
+    endofscannotes.ui \
+    measuringpage.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
